@@ -1,0 +1,35 @@
+<section class="c-featured-jobs {{ pyxl.module }}">
+    <div class="fluid-container c-featured-jobs__container">
+        <h3 class="text-center">{{ pyxl.acf.title | e }}</h3>
+        <div class="row">
+            {% for job in pyxl.acf.jobs %}
+                <div class="c-featured-jobs__col col-md-4 js-jobs-col">
+                    <div class="c-featured-jobs__card o-card">
+                        <div class="c-featured-jobs__card-content">
+                            <h3 class="c-featured-jobs__card-title c-featured-jobs__card-text">{{ job.title ?: 'Job Title' | e }}</h3>
+                            <ul>
+                                <li class="c-featured-jobs__card-text">{{ job.position ?: 'Postion' | e }}</li>
+                                <li class="c-featured-jobs__card-text">{{ job.department ?: 'Department' | e }}</li>
+                                <li class="c-featured-jobs__card-text">{{ job.type ?: 'Type' | e }}</li>
+                                <li class="c-featured-jobs__card-text">{{ job.location ?: 'Location' | e }}</li>
+                            </ul>
+                            <h6>
+                                <a href="{{ job.link.url ?: '#' | e('esc_url') }}"
+                                   class="c-featured-jobs__card-link c-featured-jobs__card-text">
+                                    <span>{{ job.link.title ?: 'Learn More' | e }}</span>
+                                </a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="text-center">
+        <span class="c-featured-jobs__load-more btn btn-primary btn-plus js-jobs-load-more"
+              role="button">Load More</span>
+            <a href="{{ pyxl.acf.button.url ?: '#' | e('esc_url') }}" class="c-featured-jobs__find-more btn btn-primary btn-plus">
+                <span>{{ pyxl.acf.button.title ?: 'Find more jobs' | e }}</span>
+            </a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,131 @@
+/**
+ *
+ * This file should contain only typography styles
+ *
+ * Styles defined here will be included in the WYSIWYG editors in the admin panel
+ *
+ * All heading tags should be accompanied by a corresponding class
+ * ie. h1, .h1 | h2, .h2
+ *
+ * These additional classes are included in the WYSIWYG editors by
+ * default (included in functions/admin-customization.php in function pyxl_mce_before_init_insert_formats)
+ *
+ * Additional styles defined here can be added to the WYSIWYG in
+ * functions/admin-customization.php in function pyxl_mce_before_init_insert_formats
+ *
+ **/
+
+
+/**
+ * Copied from teamhealth.com
+ */
+
+h1 {
+    color: #0054b3;
+    font-weight: 700;
+    line-height: 1.08;
+    margin: 30px 0;
+    font-size: 56px
+}
+
+@media (max-width:767px) {
+    h1 {
+        font-size: 40px;
+        margin: 15px 0
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    h1 {
+        font-size: 48px;
+        margin: 25px 0
+    }
+}
+
+h2 {
+    color: #333;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.1;
+    margin: .5em 0
+}
+
+@media (max-width:767px) {
+    h2 {
+        font-size: 32px
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    h2 {
+        font-size: 40px
+    }
+}
+
+h3 {
+    color: #333;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.1;
+    margin: .5em 0
+}
+
+@media (max-width:767px) {
+    h3 {
+        font-size: 24px
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    h3 {
+        font-size: 32px
+    }
+}
+
+h4 {
+    color: #333;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.1;
+    margin: .5em 0
+}
+
+@media (max-width:767px) {
+    h4 {
+        font-size: 24px
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    h4 {
+        font-size: 24px
+    }
+}
+
+h5 {
+    color: #333;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.1;
+    margin: 16px 0
+}
+
+@media (max-width:767px) {
+    h5 {
+        font-size: 18px
+    }
+}
+
+h6 {
+    color: #0054b3;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.1;
+    margin: .5em 0
+}
+
+@media (max-width:767px) {
+    h6 {
+        font-size: 18px
+    }
+}

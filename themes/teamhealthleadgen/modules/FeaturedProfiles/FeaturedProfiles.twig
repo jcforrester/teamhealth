@@ -1,0 +1,17 @@
+<section class="c-featured-profiles {{ pyxl.module }}">
+    <div class="fluid-container">
+        <div class="row no-gutters">
+            {% for profile in acf.profiles %}
+                <div class="col-md-6 col-lg-3">
+                    <div class="c-featured-profiles__profile js-featured-profile">
+                        <img src="{{ TimberImage(profile.image).src }}">
+                        <div class="c-featured-profiles__content">
+                            <h2 class="c-featured-profiles__title">{{ profile.title }}</h2>
+                            <p>{{ profile.text }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,21 @@
+/**
+ * Featured
+ */
+.c-featured {
+  $base: '.c-featured';
+
+  & {
+    padding: 50px 0;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  &__date {
+    color: #0057b8;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,23 @@
+<section class="c-featured {{ pyxl.module }}">
+    <div class="fluid-container">
+        <h3 class="text-center">{{ pyxl.acf.title ?: 'Featured Content' | e }}</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ pyxl.acf.image_1.url ?: 'https://placehold.it/548x368' | e('esc_url') }}">
+                <h3 class="c-featured__title">
+                    <a href="#">{{ pyxl.acf.title_1 ?: 'Title' | e }}</a>
+                </h3>
+                <div class="c-featured__date">{{ pyxl.acf.date_1 ?: pyxl.post.date | e }}</div>
+                <p>{{ pyxl.acf.content_1 }}</p>
+            </div>
+            <div class="col-md-6">
+                <img src="{{ pyxl.acf.image_2.url ?: 'https://placehold.it/548x368' | e('esc_url') }}">
+                <h3 class="c-featured__title">
+                    <a href="#">{{ pyxl.acf.title_1 ?: 'Title' | e }}</a>
+                </h3>
+                <div class="c-featured__date">{{ pyxl.acf.date_2 ?: pyxl.post.date |e }}</div>
+                <p>{{ pyxl.acf.content_2 }}</p>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,174 @@
+/**
+ *
+ * This file should contain only button styles
+ *
+ * Styles defined here will be included in the WYSIWYG editors in the admin panel
+ *
+ * Styles defined here can be added to the WYSIWYG in
+ * functions/admin-customization.php in function pyxl_mce_before_init_insert_formats
+ *
+ **/
+
+
+/**
+  * Copied from teamhealth.com
+  */
+
+.btn {
+    display: inline-block;
+    background-color: #0057b8;
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    transition: background .2s
+}
+
+@media (max-width:767px) {
+    .btn {
+        font-size: 14px;
+        padding: 7px 20px
+    }
+}
+
+.btn:focus,
+.btn:hover {
+    text-decoration: none;
+    background-color: #00388e;
+    color: #fff;
+}
+
+.btn.btn-plus {
+
+    &:before {
+        content: "\f067";
+        color: #fcb71c;
+        font-size: 18px;
+        margin-right: 10px;
+        vertical-align: middle;
+        position: relative;
+        top: -2px;
+
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 400;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+
+        @media (min-width: 768px) {
+            margin-right: 20px;
+        }
+    }
+}
+
+.btn.btn-secondary {
+    background-color: #00388e
+}
+
+.btn.btn-secondary:focus,
+.btn.btn-secondary:hover {
+    background-color: #00183c
+}
+
+.btn.btn-tertiary {
+    background-color: #666
+}
+
+.btn.btn-tertiary:focus,
+.btn.btn-tertiary:hover {
+    background-color: #333
+}
+
+.btn.btn-white {
+    background-color: #fff;
+    color: #0054b3
+}
+
+.btn.btn-white span {
+    color: #0054b3
+}
+
+.btn.btn-white .react-spinner_bar {
+    background-color: #333
+}
+
+.btn.btn-white:focus,
+.btn.btn-white:hover {
+    background-color: #d7d7d7
+}
+
+.btn.btn-small {
+    padding-top: 6px;
+    padding-bottom: 6px
+}
+
+.btn.btn-large {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 18px
+}
+
+.btn.btn-text,
+.btn.btn-transparent {
+    background: none;
+    color: #0054b3;
+    padding-left: 0;
+    padding-right: 0
+}
+
+.btn.btn-text:focus,
+.btn.btn-text:hover,
+.btn.btn-transparent:focus,
+.btn.btn-transparent:hover {
+    background: none;
+    color: #69b3e7
+}
+
+.btn.btn-has-icon {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 22px;
+    padding-right: 25px
+}
+
+.btn.btn-has-icon.btn-icon-right {
+    padding-left: 25px;
+    padding-right: 22px
+}
+
+.btn.btn-has-icon.btn-icon-right .btn-icon {
+    -ms-flex-order: 1;
+    order: 1;
+    padding-left: 20px;
+    padding-right: 0
+}
+
+.btn .btn-icon {
+    padding-right: 20px;
+    fill: #fcb71b
+}

@@ -1,0 +1,89 @@
+/**
+ * Page Header
+ */
+.c-site-header {
+    $base: '.c-page-header';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+
+    .fluid-container {
+        position: relative;
+    }
+
+    .navbar-collapse {
+        display: none;
+    }
+
+    &__logo  {
+        display: inline-block;
+        margin-top: 40px;
+
+        &-mobile {
+            width: 63px;
+
+            @include media-breakpoint-up(md) {
+                display: none;
+            }
+        }
+
+        &-desktop {
+
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
+    }
+
+    &__nav-icon {
+        position: absolute;
+        top: 26px;
+        right: 28px;
+        background: 0 0;
+        padding: 0px 11px;
+        border: 0;
+        color: #fff;
+        font-size: 35px;
+        cursor: pointer;
+    }
+
+    &__menu {
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background-color: $brand--blue-light;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+
+        @include media-breakpoint-up(md) {
+            max-width: 1214px;
+            height: auto;
+            margin-right: auto;
+            margin-left: auto;
+            transform: translateY(-100%);
+        }
+
+        body.menu-is-open & {
+            transform: translateX(0%);
+
+            @include media-breakpoint-up(md) {
+                transform: translateY(0%);
+            }
+        }
+
+        &-close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            padding: 6px 14px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 23px;
+        }
+    }
+}

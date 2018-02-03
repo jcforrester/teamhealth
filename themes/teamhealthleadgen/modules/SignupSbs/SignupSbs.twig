@@ -1,0 +1,26 @@
+<section class="m-{{ pyxl.module }}">
+    <div class="m-{{ pyxl.module }}__container fluid-container">
+        <div class="row no-gutters">
+            <div class="m-{{ pyxl.module }}__block is-active js-sign-up-block col-md-6">
+                <h4 class="m-{{ pyxl.module }}__title">{{ pyxl.acf.leadin_1 | e }}</h4>
+                <h4 class="m-{{ pyxl.module }}__title">{{ pyxl.acf.title_1 | e }}</h4>
+                <button class="m-{{ pyxl.module }}__arrow js-sign-up-trigger"></button>
+                <div class="m-{{ pyxl.module }}__content">
+                    <div class="m-{{ pyxl.module }}__form m-{{ pyxl.module }}__form--text">
+                        {{  gform( pyxl.acf.form_1 , true, true, true, true, true ) }}
+                    </div>
+                </div>
+            </div>
+            <div class="m-{{ pyxl.module }}__block js-sign-up-block col-md-6">
+                <h4 class="m-{{ pyxl.module }}__title">{{ pyxl.acf.leadin_2 | e }}</h4>
+                <h4 class="m-{{ pyxl.module }}__title">{{ pyxl.acf.title_2 | e }}</h4>
+                <button class="m-{{ pyxl.module }}__arrow js-sign-up-trigger"></button>
+                <div class="m-{{ pyxl.module }}__content">
+                    <div class="m-{{ pyxl.module }}__form m-{{ pyxl.module }}__form--upload">
+                        {{  gform( pyxl.acf.form_2 , true, true, true, true, true ) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

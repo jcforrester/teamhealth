@@ -1,0 +1,20 @@
+{
+  "fonts": [
+    "../node_modules/font-awesome-5/web-fonts-with-css/webfonts/*"
+  ],
+  "browserSync": {
+    "port": 9001,
+    "proxy": "https://th-lead-gen.test"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

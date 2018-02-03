@@ -1,0 +1,33 @@
+/**
+ * Hero
+ */
+.m-Hero {
+  $base: '.m-Hero';
+
+  .fluid-container {
+    position: relative;
+    color: white;
+    padding-top: 120px;
+    padding-bottom: 40px;
+    margin: auto;
+    overflow: hidden;
+
+    @include media-breakpoint-up(medium) {
+      min-height: 450px;
+    }
+  }
+
+  article {
+    max-width: 760px;
+  }
+
+  h1 {
+    color: white;
+    line-height: 1;
+    margin-bottom: 5px;
+
+    @include media-breakpoint-up(xl) {
+      font-size: 4.357em; // 70px
+    }
+  }
+}

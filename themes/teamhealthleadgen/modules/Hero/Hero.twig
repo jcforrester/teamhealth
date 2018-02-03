@@ -1,0 +1,18 @@
+<section class="m-{{ pyxl.module }} ">
+    <div class="fluid-container img-element-background">
+        <img srcset="
+            {{ pyxl.acf.desktop_image.url | e('esc_url') }},
+            {{ pyxl.acf.mobile_image.url | e('esc_url') }} 767w"
+             src="{{ pyxl.acf.desktop_image.url | e('esc_url') }}"
+             alt="{{ pyxl.acf.desktop_image.alt | e }}">
+        <article>
+            <h1>{{ pyxl.acf.title }}</h1>
+            <div class="m-{{ pyxl.module }}__text">
+                {{ pyxl.acf.content }}
+            </div>
+            <a href="{{ pyxl.acf.button_link.url }}">
+                <button class="m-{{ pyxl.module }}__btn btn btn-primary btn-plus">{{ pyxl.acf.button_link.title }}</button>
+            </a>
+        </article>
+    </div>
+</section>

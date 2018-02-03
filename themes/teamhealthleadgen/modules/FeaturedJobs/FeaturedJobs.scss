@@ -1,0 +1,116 @@
+/**
+ * Featured Jobs
+ *
+ * 1. So that the content fills 100% height in case there's no title
+ * 2. Both for z-index and the link position absolute
+ * 3. Because its parent is display flex
+ */
+.c-featured-jobs {
+  $base: '.c-featured-jobs';
+  $cardPrimaryColor: $brand--blue-light;
+
+  &__container {
+    background-color: #f2f2f2;
+    padding: 1px 30px 30px;
+  }
+
+  &__col {
+    margin-bottom: 20px;
+
+    @include media-breakpoint-down(sm) {
+      &:nth-child(4):not(.show-more),
+      &:nth-child(5):not(.show-more),
+      &:nth-child(6):not(.show-more) {
+        display: none;
+      }
+    }
+  }
+
+  &__card {
+    display: flex; // 1
+    background-color: white;
+    padding: 20px;
+    border-bottom: 4px solid $cardPrimaryColor;
+    position: relative;
+    overflow: hidden;
+    min-height: 250px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $cardPrimaryColor;
+      transform: translateY(100%);
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+
+      &:before {
+        transform: translateY(0%);
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin: 0;
+      color: #000;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    &-content {
+      position: relative; // 2
+      z-index: 1;
+      width: 100%; // 3
+      padding-bottom: 25px
+    }
+
+    &-title {
+      font-weight: 700;
+      color: #0054b3;
+      font-size: 24px;
+      overflow-wrap: break-word;
+      -webkit-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      margin-top: 0;
+    }
+
+    &-text {
+      transition: color 0.3s;
+
+      #{$base}__card:hover & {
+        color: white;
+      }
+    }
+
+    &-link {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-size: 16px;
+    }
+  }
+
+  &__load-more,
+  &__find-more {
+      @include media-breakpoint-down(md) {
+          margin-bottom: 10px
+      }
+  }
+
+  &__load-more {
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+}

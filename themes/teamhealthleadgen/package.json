@@ -1,0 +1,45 @@
+{
+  "name": "pyxl-starter-theme",
+  "version": "2.0",
+  "description": "",
+  "scripts": {
+    "watch": "NODE_ENV=watch gulp watch --gulpfile ./build/gulp.js ",
+    "dev": "NODE_ENV=dev gulp --gulpfile ./build/gulp.js",
+    "prod": "NODE_ENV=prod gulp --gulpfile ./build/gulp.js"
+  },
+  "dependencies": {
+    "bootstrap": "bootstrap@4.0.0-beta.3",
+    "font-awesome-5": "https://bitbucket.org/pyxlinc/font-awesome-5",
+    "foundation-sites": "^6.4.4-rc1",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9",
+    "uikit": "^3.0.0-beta.37"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.23.3",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-eslint": "^4.0.1",
+    "gulp-flatten": "^0.4.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^3.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-glob": "^1.0.8",
+    "gulp-sourcemaps": "^2.6.3",
+    "gulp-uglify": "^3.0.0",
+    "node-sass-package-importer": "^5.0.3",
+    "run-sequence": "^2.2.1",
+    "vinyl-named": "^1.1.0",
+    "webpack-stream": "^4.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

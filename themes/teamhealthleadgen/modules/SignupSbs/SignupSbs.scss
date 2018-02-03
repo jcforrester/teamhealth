@@ -1,0 +1,143 @@
+/**
+ * Sign Up
+ *
+ * 1. The content gives bottom padding
+ * 2. Need the bottom to match the block
+ */
+.m-SignupSbs {
+  $base: '.m-SignupSbs';
+
+  &__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__block {
+    background-color: $brand--blue-dark;
+    padding: 25px 25px 0; // 1
+    color: white;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      padding: 65px 65px 0; // 1
+    }
+
+    &.is-active {
+      background-color: $brand--blue-light;
+    }
+  }
+
+  &__content {
+    min-height: 245px; // todo: shameful fix
+    background-color: $brand--blue-light;
+    padding: 25px 25px 25px; // 2
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+
+      #{$base}__block.is-active & {
+        display: block;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      padding: 50px 50px 65px; // 2
+    }
+  }
+
+  &__form {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+    #{$base}__block.is-active & {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      padding: 15px !important;
+      font-size: 18px !important;
+      font-weight: bold;
+
+      &::placeholder {
+        color: white;
+      }
+    }
+
+    input[type="submit"] {
+      background-color: #fff;
+      color: $brand--blue-dark;
+      padding: 20px 60px;
+      height: auto;
+      font-size: 18px !important;
+      font-weight: bold;
+    }
+
+    .gform_footer {
+      text-align: center;
+    }
+
+    &--text {
+
+      .gfield_label {
+        @extend .sr-only;
+      }
+    }
+
+    &--upload {
+
+      .gfield {
+        text-align: center;
+      }
+
+      label {
+        border: 1px solid white;
+        border-radius: 3px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      input[type="file"] {
+        @extend .sr-only;
+      }
+    }
+  }
+
+  &__arrow {
+    border: none;
+    width: 74px;
+    height: 74px;
+    background: url(../images/down-circle.svg) no-repeat 0 0;
+    margin: 25px auto 25px;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius: 90px;
+
+    @include media-breakpoint-up(md) {
+      margin: 40px auto 65px;
+    }
+
+    #{$base}__block.is-active & {
+      transform: rotate(180deg);
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      box-shadow: 0px 0px 10px white;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    line-height: 1;
+
+    & + & {
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+/**
+ * Page Footer
+ */
+.c-page-footer {
+    $base: '.c-page-footer';
+
+    & {
+        min-height: 425px;
+        background: $brand--blue-light url(../images/footer.jpg) no-repeat 0 0;
+        background-size: cover;
+        color: white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    a {
+        color: white;
+    }
+
+    &__title {
+        color: #fff;
+    }
+
+    &__social {
+        margin-top: 100px;
+        margin-right: -20px;
+        margin-left: -20px;
+
+        ul {
+            list-style: none;
+            width: 250px;
+            padding-left: 0;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        li {
+            display: inline-block;
+            padding-right: 20px;
+            padding-left: 20px;
+            width: 33%;
+            margin-right: -2px;
+            margin-left: -2px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__small {
+        margin-top: 75px;
+        font-size: 12px;
+
+        &-text {
+            margin-right: 10px;
+            margin-left: 10px;
+            white-space: nowrap;
+
+            @include media-breakpoint-up(md) {
+                margin-right: 20px;
+                margin-left: 20px;
+            }
+        }
+    }
+}
