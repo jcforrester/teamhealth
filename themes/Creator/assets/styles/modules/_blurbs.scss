@@ -90,18 +90,18 @@ $yellow: #fdc64c;
 		}
 	}
 	.blurb:hover .overlay {
-		opacity: .8;
+		opacity: .9;
 	}
 	.text {
 		color: white;
-		font-size: 25px;
 		position: absolute;
 		top: 50%;
 		left: 10%;
 		transform: translate(-5%, -50%);
 		-ms-transform: translate(-50%, -50%);
 		text-align: center;
-		font-size: .85em;
+		font-size: .95em;
+		opacity: 1;
 	}
 	svg {
 		position: absolute;
