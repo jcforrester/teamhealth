@@ -1,5 +1,22 @@
+$dark_blue: #00388e;
+$blue: #0057b8;
+$light_blue: #87c2ec;
+$bg_blue: #f0f7fc;
+$yellow: #fdc64c;
 .flex-container {
-
+	background-color: $bg_blue;
+	position: relative;
+	.bg-color-1,
+	.bg-color-2 {
+		@media only screen and (min-width: 768px) {
+			height: 50%;
+			width: 100%;
+			display: block;
+		}
+	}
+	@media only screen and (min-width: 768px) {
+		height: 350px;
+	}
 	.container {
 		max-width: 1100px;
 		margin-left: auto;
@@ -9,9 +26,12 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-start;
-		background-color: pink;
-		> * {
-			  flex: 1 100%;
+		position: absolute;
+		z-index: 4;
+		top: 50%;
+		transform: translateY(-50%);
+		>* {
+			flex: 1 100%;
 			@media only screen and (min-width: 540px) {
 				flex: 1 50%;
 			}
@@ -19,25 +39,21 @@
 				flex: 1 25%;
 			}
 		}
-	} 
-
+	}
 	.blurb {
 		position: relative;
 	}
-
 	@media only screen and (min-width: 540px) {
 		.blurb {
-			padding: 0 1%
+			padding: 0 1%;
 		}
 	}
-
 	img {
 		background: #cccccc;
 		width: 100%;
 		max-width: 550px;
 		padding-bottom: 10%;
 	}
-
 	p {
 		position: absolute;
 		top: 75%;
@@ -48,14 +64,12 @@
 		width: 100%;
 		text-align: center;
 	}
-
 	@media only screen and (min-width: 540px) {
 		img {
 			padding-bottom: 50%;
 		}
 	}
-
-		.overlay {
+	.overlay {
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -66,38 +80,33 @@
 		opacity: 0;
 		transition: .5s ease;
 		background-color: #008CBA;
+	}
+	@media only screen and (min-width: 540px) {
+		.overlay {
+			left: 0;
+			height: 100%;
+			width: 100%;
 		}
-
-		@media only screen and (min-width: 540px) {
-			.overlay {
-				left: 0;
-				height: 100%;
-				width: 100%;
-			}
-		}
-
-		.blurb:hover .overlay {
-			opacity: .8;
-		  }
-
-		.text {
-			color: white;
-			font-size: 20px;
-			position: absolute;
-			top: 50%;
-			left: 10%;
-			transform: translate(-5%, -50%);
-			-ms-transform: translate(-50%, -50%);
-			text-align: center;
-			font-size: .85em;
-		}
-
-		svg {
-			position: absolute;
-			font-size: 2em;
-			top:5%;
-			left: 80%;
-			color: white;
-		}
-
-  }
+	}
+	.blurb:hover .overlay {
+		opacity: .8;
+	}
+	.text {
+		color: white;
+		font-size: 20px;
+		position: absolute;
+		top: 50%;
+		left: 10%;
+		transform: translate(-5%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		text-align: center;
+		font-size: .85em;
+	}
+	svg {
+		position: absolute;
+		font-size: 2em;
+		top: 5%;
+		left: 80%;
+		color: white;
+	}
+}
